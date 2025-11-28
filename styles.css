@@ -8,35 +8,19 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ===== HIGH-CONTRAST DARK THEME ===== */
+/* ===== LIGHT THEME (SUPER CLEAR) ===== */
 
 body {
-  background: #03040a;
-  color: #ffffff;
+  background: #f2f4f8;   /* light grey background */
+  color: #212529;         /* dark text */
 }
 
-/* Force bright text in general */
-p,
-li,
-span,
-section,
-article {
-  color: #f2f2f2;
-}
-
-/* Muted text that is still readable */
-.text-muted,
-figcaption {
-  color: #d0d3dd !important;
-}
-
-/* ===== LINKS ===== */
-
+/* Links */
 a {
-  color: #63b3ff;
+  color: #0d6efd;         /* bootstrap blue */
   text-decoration: none;
 }
 
@@ -45,8 +29,7 @@ a:focus {
   text-decoration: underline;
 }
 
-/* ===== LAYOUT CONTAINER ===== */
-
+/* Main container width */
 .container {
   width: min(100%, 900px);
   margin: 0 auto;
@@ -57,88 +40,108 @@ a:focus {
 
 .site-header,
 .site-footer {
-  background: #060816;
-  border-bottom: 1px solid #262a3a;
+  background: #0d1117;          /* dark header/footer bar */
+  border-bottom: 1px solid #1f2933;
 }
 
 .site-footer {
-  border-top: 1px solid #262a3a;
+  border-top: 1px solid #1f2933;
   border-bottom: none;
 }
 
 .site-footer p {
   margin: 0;
-  color: #d0d3dd;
+  color: #e5e7eb;
 }
 
-.site-title {
-  margin: 0;
-  font-size: 1.5rem;
+/* ===== NAVBAR (Bootstrap) ===== */
+
+.navbar {
+  background: #0d1117 !important;
+  border-bottom: 1px solid #1f2933;
 }
 
-/* Old Lab01 nav (safe to keep) */
-.site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+.navbar-brand,
+.nav-link {
+  color: #f9fafb !important;
 }
 
-.site-nav a[aria-current="page"] {
-  color: #7aa2f7;
+.nav-link:hover {
+  color: #93c5fd !important;
+}
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  color: #60a5fa !important;
   font-weight: 600;
+}
+
+/* ===== HEADINGS & TEXT ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #111827;
+}
+
+p,
+li,
+span {
+  color: #212529;
 }
 
 /* ===== SECTIONS & CARDS ===== */
 
-/* For your semantic sections from Lab01 */
+/* Semantic sections from Lab01 */
 main article,
 section,
 .contact-card {
-  background: #171927;
-  border: 1px solid #34384a;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 16px;
   padding: 1.25rem;
   margin-block: 1rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
 }
 
 /* Bootstrap cards */
 .card {
-  background: #171927 !important;
-  border: 1px solid #34384a !important;
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
 }
 
-/* 👉 KEY FIX: everything inside a card is bright + full opacity */
+/* Make sure EVERYTHING inside cards is fully visible */
 .card * {
-  color: #fdfdfd !important;
+  color: #212529 !important;
   opacity: 1 !important;
 }
 
-/* Card hover */
+/* Card hover effect */
 .card:hover {
   transform: translateY(-4px);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
 }
 
-/* Contact list */
-.contact-card ul {
-  margin: 0;
-  padding-left: 1rem;
-}
-
+/* Contact card links */
 .contact-card a {
-  color: #63b3ff;
+  color: #0d6efd;
 }
 
 /* Lists */
 ol,
 ul {
   padding-left: 1.25rem;
+}
+
+/* Contact list */
+.contact-card ul {
+  margin: 0;
+  padding-left: 1rem;
 }
 
 /* ===== IMAGES ===== */
@@ -150,50 +153,13 @@ img {
   display: block;
 }
 
-/* ===== BOOTSTRAP NAVBAR OVERRIDES ===== */
-
-.navbar {
-  background: #060816 !important;
-  border-bottom: 1px solid #262a3a;
-}
-
-.navbar-brand,
-.nav-link {
-  color: #ffffff !important;
-}
-
-.nav-link:hover {
-  color: #63b3ff !important;
-}
-
-/* Active nav link */
-.nav-link.active,
-.nav-link[aria-current="page"] {
-  color: #7aa2f7 !important;
-  font-weight: 600;
-}
-
-/* ===== HEADINGS & PARAGRAPHS ===== */
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #ffffff !important;
-}
-
-p {
-  color: #f2f2f2 !important;
-}
-
 /* ===== SPACING / SCROLL ===== */
 
 main {
   padding-block: 2rem;
 }
 
-/* So anchor to #main-content doesn't hide under navbar */
+/* make anchor jumps not hide under navbar */
 #main-content {
   scroll-margin-top: 80px;
 }
