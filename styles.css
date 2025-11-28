@@ -1,4 +1,4 @@
-/* ---------- GLOBAL RESET ---------- */
+/* ===== GLOBAL RESET ===== */
 
 * {
   box-sizing: border-box;
@@ -8,39 +8,37 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-/* ---------- COLORS & THEME (HIGH CONTRAST) ---------- */
+/* ===== HIGH-CONTRAST DARK THEME ===== */
 
 body {
-  background: #020308;         /* almost black */
-  color: #f9f9f9;              /* bright text */
+  background: #03040a;
+  color: #ffffff;
 }
 
-/* Make sure all normal text is bright */
-p,
-li,
-span,
-.card,
-.card-body,
+/* Force bright text everywhere, override Bootstrap */
+body,
 main,
 section,
-article {
-  color: #f3f3f3;
+article,
+.card,
+.card-body,
+.card * {
+  color: #fdfdfd !important;
 }
 
-/* Muted text but still readable */
+/* Muted text that is still readable */
 .text-muted,
 figcaption {
-  color: #c4c8d4 !important;
+  color: #d0d3dd !important;
 }
 
-/* ---------- LINKS ---------- */
+/* ===== LINKS ===== */
 
 a {
-  color: #70c3ff;
+  color: #63b3ff;
   text-decoration: none;
 }
 
@@ -49,7 +47,7 @@ a:focus {
   text-decoration: underline;
 }
 
-/* ---------- LAYOUT CONTAINER ---------- */
+/* ===== LAYOUT CONTAINER ===== */
 
 .container {
   width: min(100%, 900px);
@@ -57,79 +55,50 @@ a:focus {
   padding: 1rem;
 }
 
-/* ---------- HEADER & FOOTER ---------- */
+/* ===== HEADER & FOOTER ===== */
 
 .site-header,
 .site-footer {
-  background: #050816;
-  border-bottom: 1px solid #212432;
+  background: #060816;
+  border-bottom: 1px solid #262a3a;
 }
 
 .site-footer {
-  border-top: 1px solid #212432;
+  border-top: 1px solid #262a3a;
   border-bottom: none;
 }
 
 .site-footer p {
   margin: 0;
-  color: #c4c8d4;
+  color: #d0d3dd;
 }
 
-.site-title {
-  margin: 0;
-  font-size: 1.5rem;
-}
+/* ===== SECTIONS & CARDS ===== */
 
-/* (Old Lab01 nav – safe to keep if used anywhere) */
-.site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.site-nav a[aria-current="page"] {
-  color: #7aa2f7;
-  font-weight: 600;
-}
-
-/* ---------- SECTIONS / CARDS ---------- */
-
-/* For semantic elements you used in Lab01 */
+/* For your semantic sections from Lab01 */
 main article,
 section,
 .contact-card {
-  background: #10121f;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #171927;
+  border: 1px solid #34384a;
   border-radius: 16px;
   padding: 1.25rem;
   margin-block: 1rem;
 }
 
-/* Bootstrap .card matching the same style */
+/* Bootstrap card */
 .card {
-  background: #10121f;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #171927 !important;
+  border: 1px solid #34384a !important;
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
-/* Hover lift for project cards, etc. */
+/* Card hover */
 .card:hover {
   transform: translateY(-4px);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
-}
-
-/* Contact card links */
-.contact-card a {
-  color: #70c3ff;
-}
-
-.contact-card a:hover {
-  text-decoration: underline;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
 }
 
 /* Lists */
@@ -138,7 +107,17 @@ ul {
   padding-left: 1.25rem;
 }
 
-/* ---------- IMAGES ---------- */
+/* Contact list */
+.contact-card ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.contact-card a {
+  color: #63b3ff;
+}
+
+/* ===== IMAGES ===== */
 
 img {
   max-width: 100%;
@@ -147,55 +126,55 @@ img {
   display: block;
 }
 
-/* ---------- BOOTSTRAP NAVBAR OVERRIDES ---------- */
+/* ===== BOOTSTRAP NAVBAR OVERRIDES ===== */
 
 .navbar {
-  background: #050816 !important;
-  border-bottom: 1px solid #212432;
+  background: #060816 !important;
+  border-bottom: 1px solid #262a3a;
 }
 
 .navbar-brand,
 .nav-link {
-  color: #f5f5f5 !important;
+  color: #ffffff !important;
 }
 
 .nav-link:hover {
-  color: #70c3ff !important;
+  color: #63b3ff !important;
 }
 
-/* Active page link */
+/* Active nav link */
 .nav-link.active,
 .nav-link[aria-current="page"] {
   color: #7aa2f7 !important;
   font-weight: 600;
 }
 
-/* ---------- TYPOGRAPHY ---------- */
+/* ===== HEADINGS & PARAGRAPHS ===== */
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 p {
-  color: #e5e5e5;
+  color: #f2f2f2 !important;
 }
 
-/* ---------- SPACING / SCROLL ---------- */
+/* ===== SPACING / SCROLL ===== */
 
 main {
   padding-block: 2rem;
 }
 
-/* So jumping to #main-content doesn’t hide under navbar */
+/* So anchor to #main-content doesn't hide under navbar */
 #main-content {
   scroll-margin-top: 80px;
 }
 
-/* ---------- GRID UTILITY FROM LAB01 (still used in hobbies) ---------- */
+/* ===== SIMPLE GRID (used in hobbies gallery) ===== */
 
 .grid {
   display: grid;
