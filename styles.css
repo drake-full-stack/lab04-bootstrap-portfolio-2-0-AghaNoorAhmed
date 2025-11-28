@@ -18,15 +18,13 @@ body {
   color: #ffffff;
 }
 
-/* Force bright text everywhere, override Bootstrap */
-body,
-main,
+/* Force bright text in general */
+p,
+li,
+span,
 section,
-article,
-.card,
-.card-body,
-.card * {
-  color: #fdfdfd !important;
+article {
+  color: #f2f2f2;
 }
 
 /* Muted text that is still readable */
@@ -73,6 +71,26 @@ a:focus {
   color: #d0d3dd;
 }
 
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Old Lab01 nav (safe to keep) */
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a[aria-current="page"] {
+  color: #7aa2f7;
+  font-weight: 600;
+}
+
 /* ===== SECTIONS & CARDS ===== */
 
 /* For your semantic sections from Lab01 */
@@ -86,7 +104,7 @@ section,
   margin-block: 1rem;
 }
 
-/* Bootstrap card */
+/* Bootstrap cards */
 .card {
   background: #171927 !important;
   border: 1px solid #34384a !important;
@@ -94,17 +112,17 @@ section,
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
+/* 👉 KEY FIX: everything inside a card is bright + full opacity */
+.card * {
+  color: #fdfdfd !important;
+  opacity: 1 !important;
+}
+
 /* Card hover */
 .card:hover {
   transform: translateY(-4px);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
-}
-
-/* Lists */
-ol,
-ul {
-  padding-left: 1.25rem;
 }
 
 /* Contact list */
@@ -115,6 +133,12 @@ ul {
 
 .contact-card a {
   color: #63b3ff;
+}
+
+/* Lists */
+ol,
+ul {
+  padding-left: 1.25rem;
 }
 
 /* ===== IMAGES ===== */
