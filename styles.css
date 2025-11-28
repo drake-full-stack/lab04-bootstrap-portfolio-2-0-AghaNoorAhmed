@@ -1,0 +1,27 @@
+:root {
+  --bg: #0b0c10;
+  --card: #111318;
+  --text: #e6e6e6;
+  --muted: #b7bdc6;
+  --accent: #7aa2f7;
+  --link: #8bd5ff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+img { max-width: 100%; height: auto; border-radius: 12px; display: block; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+.container { width: min(100%, 900px); margin: 0 auto; padding: 1rem; }
+.site-header, .site-footer { background: #0f1116; border-bottom: 1px solid #1b1e27; }
+.site-footer { border-top: 1px solid #1b1e27; border-bottom: none; }
+.site-title { margin: 0; font-size: 1.5rem; }
+.site-nav ul { list-style: none; padding: 0; margin: 0.5rem 0 0; display: flex; gap: 1rem; flex-wrap: wrap; }
+.site-nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+
+main article, section, .contact-card { background: var(--card); border: 1px solid #1b1e27; border-radius: 16px; padding: 1rem; margin-block: 1rem; }
+.contact-card ul { margin: 0; padding-left: 1rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+
+ol, ul { padding-left: 1.25rem; }

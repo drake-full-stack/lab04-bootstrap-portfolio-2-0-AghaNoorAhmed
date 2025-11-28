@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agha Noor Ahmed Khan — About Me</title>
+    <meta name="description" content="Portfolio of Agha Noor Ahmed Khan, Computer Science student at Drake University." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Agha Noor Ahmed Khan</h1>
+        <nav aria-label="Primary" class="site-nav">
+          <ul>
+            <li><a href="index.html" aria-current="page">About</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="container">
+      <article>
+        <header>
+          <h2>About Me</h2>
+          <p><strong>Location:</strong> Des Moines, Iowa • <strong>Program:</strong> B.S. in Computer Science, Drake University (’25)</p>
+        </header>
+
+        <section aria-labelledby="intro-heading">
+          <h3 id="intro-heading">Hi, I’m Agha Noor!</h3>
+          <p>
+            I’m a Computer Science student at Drake University interested in web development,
+            human–computer interaction, and applied AI. On campus, I’ve served as
+            Chapter President for Phi Gamma Delta and worked on data and KPI projects in the
+            Insurance Innovation Lab.
+          </p>
+        </section>
+
+        <section aria-labelledby="experience-heading">
+          <h3 id="experience-heading">Experience</h3>
+          <ul>
+            <li>
+              <article>
+                <h4>Insurance Innovation Lab — Research & KPIs</h4>
+                <p>Worked on senior health & wellness program research, created KPI ideas, and supported data reporting.</p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h4>Student Leadership — Phi Gamma Delta (Delta Iota)</h4>
+                <p>Led chapter operations, recruitment, and events; collaborated with alumni and campus partners.</p>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="education-heading">
+          <h3 id="education-heading">Education</h3>
+          <p>Drake University — B.S. in Computer Science (Expected Dec 2025)</p>
+        </section>
+
+        <aside aria-labelledby="contact-heading" class="contact-card">
+          <h3 id="contact-heading">Contact</h3>
+          <ul>
+            <li>Email: <a href="mailto:aghanoorahmed.khan@drake.edu">aghanoorahmed.khan@drake.edu</a></li>
+            <li>Alt Email: <a href="mailto:aghanoormedia@gmail.com">aghanoormedia@gmail.com</a></li>
+            <li>City: Des Moines, IA</li>
+          </ul>
+        </aside>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Agha Noor Ahmed Khan</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
